@@ -1,3 +1,3 @@
 'use strict'
 
-angular.module('addRecipe', ['ngRoute']);
+angular.module('addRecipe', ['ngRoute', 'restangular']);

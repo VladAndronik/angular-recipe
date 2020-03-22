@@ -2,8 +2,8 @@
 
 angular.
     module('recipeApp').
-    config(['$routeProvider',
-           function config($routerProvider) {
+    config(['$routeProvider','RestangularProvider',
+           function config($routerProvider, RestangularProvider) {
                $routerProvider.
                 when('/recipes', {
                    template: '<recipe-list></recipe-list>'
@@ -15,5 +15,9 @@ angular.
                    template: "<add-recipe></add-recipe>"
                }).
                otherwise('/recipes');
+               
+               RestangularProvider.setBaseUrl('http://localhost:3000/');
+
            }
+            
    ]);

@@ -2,6 +2,7 @@
 
 angular.module("recipeApp", [
     "ngRoute",
+    "restangular",
     "recipeDetail",
     "recipeList",
     "addRecipe"

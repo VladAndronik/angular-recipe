@@ -8,10 +8,13 @@
   "dependencies": {
     "angular": "1.7.x",
     "angular-route": "1.7.x",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.3.x",
+    "restangular": "1.6.x",
+    "lodash": "4.17.x"
   },
   "devDependencies": {
     "angular-mocks": "1.7.x",
+    "underscore": "1.9.x",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",
@@ -25,8 +28,8 @@
     "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
     "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist}/**/*\" app/lib -C",
-    "prestart": "npm install",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,restangular/dist,lodash}/**/*\" app/lib -C",
+    "prestart": "npm install && json-server app/recipes/recipes-jserv.json",
     "start": "http-server ./app -a localhost -p 8000 -c-1",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

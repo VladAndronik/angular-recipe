@@ -1,4 +1,4 @@
 'use strict'
 
 // define the recipeeList module
-angular.module('recipeList', []);
+angular.module('recipeList', ['restangular']);
