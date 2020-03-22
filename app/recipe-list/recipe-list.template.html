@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <p>
+                Search by name: <input ng-model="$ctrl.query.name" />
+                
+                Filter by category: <input ng-model="$ctrl.query.category" />
+            </p>
+            
+            <p>
+                Sort by:
+                <select ng-model="$ctrl.orderProp">
+                    <option value="name">
+                        Alphabetical
+                    </option>
+                    <option value="category">
+                        Category
+                    </option>
+                    
+                    <option value="date">
+                        Date
+                    </option>
+                </select>
+                
+            </p>
+            
+            <a href="#!/add"><button>Add recipe</button></a>
+            
+        </div>
+        
+        <div class="col-md-10">
+            <ul class="recipes">
+                <li ng-repeat="recipe in $ctrl.recipes | filter:$ctrl.query | orderBy:$ctrl.orderProp" class='thumbnail'>
+                    
+                    <a href="#!/recipes/{{recipe.id}}">
+                    {{recipe.name}}
+                    </a>
+                    <p>Date: {{recipe.date}}</p>
+                    
+                    <p>Category: {{recipe.category}}</p>
+                    
+                    <p>Description: {{recipe.desc}}</p>
+                      
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</div>
