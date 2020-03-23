@@ -14,6 +14,9 @@ angular.
                when('/add', {
                    template: "<add-recipe></add-recipe>"
                }).
+               when('/edit/:recipeId', {
+                   template: "<edit-recipe></edit-recipe>"
+               }).
                otherwise('/recipes');
                
                RestangularProvider.setBaseUrl('http://localhost:3000/');

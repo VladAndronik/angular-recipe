@@ -2,7 +2,7 @@
     <label>Name: <input type="text" ng-model="recipe.name" /></label><br />
     <label>Category: <input type="text" ng-model="recipe.category" /></label><br />
     <label>Description: <input type="text" ng-model="recipe.desc" /></label><br />
-    <label>Method(split steps with nl): <input type="text" ng-model="recipe.method" /></label><br />
+    <label>Method(split steps with nl): <textarea ng-model="recipe.method" cols=100 rows=10></textarea></label><br />
     
     <a href="#!/recipes"><button>Cancel</button></a>
     <button ng-click="save()">Save</button>

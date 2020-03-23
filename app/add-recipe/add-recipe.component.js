@@ -27,7 +27,7 @@ angular.module('addRecipe').
                     
                     recipeLong['id'] = recipeShort['id'];
                     recipeLong['name'] = recipeShort['name'];
-                    recipeLong['method'] = [recipeShort['method']];
+                    recipeLong['method'] = recipeShort['method'].split('\n');
                     delete recipeShort['method'];
                     
                     Restangular.all('recipesShort')

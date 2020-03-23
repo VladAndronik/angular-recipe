@@ -9,7 +9,7 @@
             
             <p>
                 Sort by:
-                <select ng-model="$ctrl.orderProp">
+                <select ng-model="$ctrl.orderProp" ng-change="changed()">
                     <option value="name">
                         Alphabetical
                     </option>
@@ -33,7 +33,7 @@
                 <li ng-repeat="recipe in $ctrl.recipes | filter:$ctrl.query | orderBy:$ctrl.orderProp" class='thumbnail'>
                     
                     <a href="#!/recipes/{{recipe.id}}">
-                    {{recipe.name}}
+                        {{recipe.name}}
                     </a>
                     <p>Date: {{recipe.date}}</p>
                     
@@ -42,7 +42,7 @@
                     <p>Description: {{recipe.desc}}</p>
                      
                      <button ng-click='destroy(recipe.id)'>Delete</button>
-                     <button>Edit</button>
+                     <a href="#!/edit/{{recipe.id}}"><button>Edit</button></a>
                       
                 </li>
             </ul>

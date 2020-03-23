@@ -4,9 +4,14 @@ angular.
     module('recipeList').
     component('recipeList', {
         templateUrl: 'recipe-list/recipe-list.template.html',
-        controller: ['Restangular', '$scope', '$location', function RecipeListController(Restangular, $scope, $location) {
+        controller: ['Restangular', '$scope', '$location',"$window",
+         function RecipeListController(Restangular, $scope, $location, $window) {
             var self = this;
-            self.orderProp = 'category';
+            if (!$window.localStorage.getItem('orderProp'))
+                $window.localStorage.setItem("orderProp", 'category');
+            self.orderProp = $window.localStorage.getItem('orderProp');
+             
+            
             self.recipes = Restangular.all("recipesShort").getList().$object;
             
             $scope.destroy = function(id) {
@@ -18,6 +23,10 @@ angular.
                 
                 Restangular.one('recipesLong', id).remove();
 
+            }
+            
+            $scope.changed = function() {
+                $window.localStorage.setItem("orderProp", self.orderProp);
             }
 
         }]

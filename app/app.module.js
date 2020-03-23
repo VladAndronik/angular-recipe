@@ -5,5 +5,6 @@ angular.module("recipeApp", [
     "restangular",
     "recipeDetail",
     "recipeList",
-    "addRecipe"
+    "addRecipe",
+    "editRecipe"
 ]);
