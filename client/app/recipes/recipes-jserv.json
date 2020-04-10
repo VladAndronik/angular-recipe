@@ -1,0 +1,56 @@
+{
+  "recipesShort": [
+    {
+      "id": "baked-potato",
+      "name": "Baked potato",
+      "desc": "Jacket potatoes and chilli are great comfort food when the nights draw in. Make ours in the week when you're short on time for a nutritious family dinner",
+      "category": "main",
+      "date": "2019-04-01"
+    },
+    {
+      "id": "jacket-potato",
+      "name": "Turkey chilli jacket potatoes",
+      "desc": "Turkey mince is cheap and lean - flavour Mexican-style with cumin and paprika and serve in crisp baked potatoes",
+      "category": "main",
+      "date": "2019-05-01"
+    },
+    {
+      "id": "chicken-lemon-skewers",
+      "name": "Chicken & lemon skewers",
+      "desc": "Feed the family these chicken skewers in flatbreads. They taste great as well as being healthy and an easy-to-make dinner for hectic weeknights",
+      "category": "secondary",
+      "date": "2019-03-01"
+    }
+  ],
+  "recipesLong": [
+    {
+      "id": "baked-potato",
+      "name": "Baked potato",
+      "method": [
+        "Heat oven to 200C/180C fan/gas 6. Prick the potatoes all over with a fork, then put on a baking sheet    and bake in the oven for 1 hr.",
+        "While the potatoes are baking, heat the oil in a large frying pan. Add the onion and fry over a high heat for 5 mins until softened. Add the garlic and chilli sachet. Stir a few times to coat the onions in the spices, then tip the onion mixture into a large ovenproof dish.",
+        "Put the pan back over high heat and add the beef mince, breaking it up with a spatula as you go. Cook until starting to become crisp at the edges, then add to the dish with the onions. Return the pan to heat and cook the bacon until crisp at the edges. Add the bacon to the beef and stir to combine.",
+        "Stir in the tomato purée and tomatoes, then put the dish in the oven with the potatoes and bake for 25-30 mins until bubbling and starting to thicken. Stir in the beans and season well. Return to the oven for 5 mins to warm through.",
+        "Cut a cross in the top of each potato and squeeze the sides to open. Spoon in the baked chilli and top with soured cream, cheese and coriander if you like."
+      ]
+    },
+    {
+      "id": "jacket-potato",
+      "name": "Turkey chilli jacket potatoes",
+      "method": [
+        " Heat oven to 200C/180C fan/gas 6. Use a fork to prick the potatoes all over. Rub with a little of the oil, and bake for 45 mins until tender.",
+        "Meanwhile, make the chilli. Heat the remaining oil in a large frying pan over a medium heat. Add the onion, garlic and some seasoning, and cook for 5 mins until soft. Add the turkey mince and season again, then increase the heat and break up the mince with the back of your spoon. When it’s cooked through, add the spices, vinegar, sugar and passata. Reduce to a simmer and cook for 10 mins or until the liquid has reduced.",
+        "Cut a cross in the top of each potato and spoon in the chilli. Serve each potato sprinkled with cheese and spring onions."
+      ]
+    },
+    {
+      "id": "chicken-lemon-skewers",
+      "name": "Chicken & lemon skewers",
+      "method": [
+        "Take 200g chicken",
+        "Take souce",
+        " Boil water and prepare other stuff"
+      ]
+    }
+  ]
+}

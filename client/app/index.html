@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en' ng-app='recipeApp'>
+    <head>
+       
+        <meta charset="utf-8">
+        <title>Recipe gallery</title>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="app.css" />
+        
+        
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-route/angular-route.js"></script>
+        
+        <script src="lib/lodash/lodash.js"></script>
+        <script src="lib/restangular/dist/restangular.js"></script>
+        
+        <script src='app.module.js'></script>
+        <script src="app.config.js"></script>
+        
+<!--        /recipe import-->
+        <script src="recipe-list/recipe-list.module.js"></script>
+        <script src="recipe-list/recipe-list.component.js"></script>
+        
+<!--        /recipe/:recipeId import -->
+        <script src="recipe-detail/recipe-detail.module.js"></script>
+        <script src="recipe-detail/recipe-detail.component.js"></script>
+        
+        <!--        /add import -->
+        <script src="add-recipe/add-recipe.module.js"></script>
+        <script src="add-recipe/add-recipe.component.js"></script>
+        
+        <!--        /edit import -->
+        <script src="edit-recipe/edit-recipe.module.js"></script>
+        <script src="edit-recipe/edit-recipe.component.js"></script>
+        
+    </head>
+    
+    <body>
+        <div ng-view></div>
+    </body>
+    
+</html>

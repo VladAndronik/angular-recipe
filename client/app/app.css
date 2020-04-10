@@ -1,0 +1,16 @@
+body {
+  padding-top: 20px;
+}
+
+.recipes {
+  list-style: none;
+}
+
+.recipes li {
+  clear: both;
+  padding: 0.5em;
+}
+
+.recipe-methods {
+    list-style: lower-roman;
+}

@@ -1,0 +1,13 @@
+<h1>{{$ctrl.recipe.name}}</h1>
+
+
+<ul class="recipe-methods">
+  <li ng-repeat="desc in $ctrl.recipe.description_long track by $index">
+    <p>{{desc}}</p>
+  </li>
+
+<button ng-click=destroy()>Delete</button>
+<a href="#!/edit/{{$ctrl.recipe._id}}"><button>Edit</button></a>
+<a href="#!/recipes"><button>Back to recipes</button></a>
+
+

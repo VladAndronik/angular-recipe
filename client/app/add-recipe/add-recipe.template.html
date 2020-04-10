@@ -1,0 +1,9 @@
+<form novalidate class="simple-form">
+    <label>Name: <input type="text" ng-model="recipe.name" /></label><br />
+    <label>Category: <input type="text" ng-model="recipe.category" /></label><br />
+    <label>Description: <input type="text" ng-model="recipe.description_short" /></label><br />
+    <label>Method(split steps with nl): <textarea ng-model="recipe.description_long" cols=100 rows=10></textarea></label><br />
+    
+    <a href="#!/recipes"><button>Cancel</button></a>
+    <button ng-click="save()">Save</button>
+</form>
