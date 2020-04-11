@@ -1,0 +1,14 @@
+<h2>Sign up page</h2>
+<span>If registered user, refer to</span>
+<a href="#!/login">Log in</a>
+<span>page.</span>
+
+<form novalidate class="simple-form">
+   <label>Name: <input type="text" ng-model="user.name" /></label><br />
+    <label>Email: <input type="email" ng-model="user.email" /></label><br />
+    <label>Password: <input type="password" ng-model="user.password" /></label><br />
+    
+    <a href="#!/recipes"><button>Cancel</button></a>
+    <button ng-click="register()">Sign up</button>
+    
+</form>

@@ -2,9 +2,15 @@
 
 angular.module("editRecipe").
     component("editRecipe", {
-        templateUrl: "edit-recipe/edit-recipe.template.html",
-        controller: ['$routeParams', 'Restangular', "$scope", "$location","$http",
-             function EditRecipeController($routerParams, Restangular, $scope, $location, $http) {
+        templateUrl: "modules/edit-recipe/edit-recipe.template.html",
+        controller: ['$routeParams', 'Authentication', "$scope", "$location","$http",
+             function EditRecipeController($routerParams, Authentication, $scope, $location, $http) {
+                 
+                 if (!Authentication.isLogged()){
+                     window.alert("You are not authorized user. Login or create account to proceed.");
+                     $location.path('/login');
+                 }
+                 
                  var self = this;
                  $http.get('http://127.0.0.1:9000/api/recipes/'+$routerParams.recipeId.toString()).then(function(response){
                        self.recipe = response.data; 

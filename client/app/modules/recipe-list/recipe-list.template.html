@@ -24,7 +24,10 @@
                 
             </p>
             
-            <a href="#!/add"><button>Add recipe</button></a>
+            <a href="#!/add"><button ng-if="isLogged()">Add recipe</button></a>
+            <a href="#!/login"><button>Login</button></a>
+            <a href="#!/register"><button>Sign up</button></a>
+            <button ng-click="logout()">Log out</button>
             
         </div>
         
@@ -41,8 +44,8 @@
                     
                     <p>Description: {{recipe.description_short}}</p>
                      
-                     <button ng-click='destroy(recipe._id)'>Delete</button>
-                     <a href="#!/edit/{{recipe._id}}"><button>Edit</button></a>
+                     <button ng-click='destroy(recipe._id)' ng-if="isLogged()">Delete</button>
+                     <a href="#!/edit/{{recipe._id}}"><button ng-if='isLogged()'>Edit</button></a>
                       
                 </li>
             </ul>

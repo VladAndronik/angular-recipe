@@ -6,5 +6,8 @@ angular.module("recipeApp", [
     "recipeDetail",
     "recipeList",
     "addRecipe",
-    "editRecipe"
+    "editRecipe",
+    "loginUser",
+    "registerUser",
+    "serviceAuth"
 ]);

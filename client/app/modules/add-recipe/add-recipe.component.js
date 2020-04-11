@@ -2,17 +2,19 @@
 
 angular.module('addRecipe').
     component('addRecipe', {
-        templateUrl: 'add-recipe/add-recipe.template.html',
-        controller: ['$location', 'Restangular', "$scope", "$http", 
-             function AddRecipeController($location, Restangular, $scope, $http) {
+        templateUrl: 'modules/add-recipe/add-recipe.template.html',
+        controller: ['$rootScope', '$location', 'Authentication', "$scope", "$http",
+             function AddRecipeController($rootScope, $location, Authentication, $scope, $http) {
+                 if (!Authentication.isLogged()){
+                     window.alert("You are not authorized user. Login or create account to proceed.");
+                     $location.path('/login');
+                 }
                 var getDate = function() {
                     var today = new Date();
                     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
                     return date;
                 }
-                 
-                var recipeShort = {};
-                var recipeLong = {};
+                
                 var recipe = {};
                 $scope.save = function() {
                     angular.copy($scope.recipe, recipe);

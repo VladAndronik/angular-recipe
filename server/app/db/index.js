@@ -30,7 +30,8 @@ const db = () => {
 			process.exit(0);
 		});
 	});
+    
+    require('../entities/user/user.schema');
 
 }
-
 module.exports = db;
