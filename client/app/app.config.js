@@ -26,6 +26,9 @@ angular.
                when('/register', {
                    template: "<register-user></register-user>"
                }).
+               when('/mine', {
+                   template: "<author-recipe></author-recipe>"
+               }).
                otherwise('/recipes');
                
 //               RestangularProvider.setBaseUrl('http://localhost:9000/');

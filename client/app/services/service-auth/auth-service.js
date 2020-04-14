@@ -35,6 +35,11 @@ module.service('Authentication', ['$window', '$location', '$http', function($win
        return null;
    }
    
+   this.addLikedItem = function() {
+       var userInfo = this.getUserDetails();
+       return userInfo;
+   }
+   
    this.isLogged = function() {
        const user = this.getUserDetails();
        if (user) {

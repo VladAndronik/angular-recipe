@@ -9,5 +9,6 @@ angular.module("recipeApp", [
     "editRecipe",
     "loginUser",
     "registerUser",
-    "serviceAuth"
+    "serviceAuth",
+    "authorRecipe"
 ]);

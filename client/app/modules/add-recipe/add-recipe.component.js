@@ -18,13 +18,17 @@ angular.module('addRecipe').
                 var recipe = {};
                 $scope.save = function() {
                     angular.copy($scope.recipe, recipe);
+                    var user_info = Authentication.getUserDetails();
+                    
                     recipe['date'] = getDate();
                     recipe['description_long'] = recipe['description_long'].split('\n');
-//                   
-//                    console.log(recipe);
+                    
+                    recipe['author_id'] = user_info['_id'];
+                    recipe['author_name'] = user_info['name'];
+
                     $http.post('http://127.0.0.1:9000/api/recipes', JSON.stringify(recipe)).then(function(res, status){
                         console.log("added " + recipe['name']);
-//                        console.log(res);
+                        console.log(res);
                         $location.path('/recipes/' + res['data']['_id']);
                     });
                 }

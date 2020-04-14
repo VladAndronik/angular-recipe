@@ -1,6 +1,5 @@
 'use strict'
 
-
 angular.
     module('recipeList').
     component('recipeList', {
@@ -42,6 +41,10 @@ angular.
             }
             $scope.isLogged = function() {
                 return Authentication.isLogged();
+            }
+            
+            $scope.loggedId = function() {
+                return Authentication.getUserDetails()['_id'];
             }
         }]
     });

@@ -5,7 +5,9 @@ const Recipe = new mongoose.Schema({
     category: String,
     date: String,
     description_short:String,
-    description_long:[{type:String}]
+    description_long:[{type:String}],
+    author_id: String,
+    author_name: String
 }, {
 	versionKey: false
 });

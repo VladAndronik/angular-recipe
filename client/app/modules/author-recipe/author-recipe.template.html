@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <a href="#!/add"><button>Add recipe</button></a>
+            <a href="#!/recipes"><button>Back to all recipes</button></a>
+        </div>
+        
+        <div class="col-md-10">
+            <ul class="recipes">
+                <li ng-repeat="recipe in $ctrl.recipes | filter:$ctrl.query | orderBy:$ctrl.orderProp" class='thumbnail'>
+                    
+                    <a href="#!/recipes/{{recipe._id}}">
+                        {{recipe.name}}
+                    </a>
+                    <p>Date: {{recipe.date}}</p>
+                    
+                    <p>Category: {{recipe.category}}</p>
+                    
+                    <p>Description: {{recipe.description_short}}</p>
+                     
+                     <button ng-click='destroy(recipe._id)'>Delete</button>
+                     <a href="#!/edit/{{recipe._id}}"><button>Edit</button></a> 
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</div>
