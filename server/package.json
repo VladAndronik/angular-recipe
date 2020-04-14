@@ -4,6 +4,7 @@
   "description": "cookbook academy",
   "main": "/bin/www",
   "scripts": {
+    "prestart": "npm install",
     "start": "node ./bin/www"
   },
   "author": "",
