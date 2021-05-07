@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "angular-mocks": "1.7.x",
-    "underscore": "1.9.x",
+    "underscore": "1.12.x",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.3.0",
